@@ -1,0 +1,98 @@
+
+.main{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 1000px;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 50px;
+  
+}
+.main > h1{
+text-align: center;
+}
+.mainContainer{
+    width: 800px;
+    background-color: blue;
+}
+
+.lisproduct{
+    background-color: rgb(240, 232, 248);
+    display:flex;
+    width: 800px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 100px;
+    box-shadow: 1px 1px 1px 1px lightgray;
+    border-radius: 5px;
+}
+.item{
+    width: 100px;
+    margin-left: 5px;
+    margin-right: 5px;
+  
+    
+}
+.item> h5{
+    margin-left: 30px;
+    margin-right: 20px;
+    font-weight:700px;
+   
+    
+}
+.item> p{
+    margin-left: 20px;
+    margin-right: 20px;
+    font-weight:500px;
+    font-size: 15px;
+    color: rgb(102, 102, 102);
+   
+    
+}
+
+.button{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+.btnD{
+    border-color: rgb(241, 88, 88) solid 1px;
+    outline: none;
+    border: none;
+    width: 50px;
+    height: 25px;
+    border-radius: 3px;
+    margin-top: 7px;
+    margin-left: 5px;
+}
+.btnE{
+    border-color: rgb(99, 184, 240) solid 1px;
+    border: none;
+    outline: none;
+    top: 0;
+    position: relative;
+    margin-top: 30px;
+    width: 50px;
+    height: 25px;
+    border-radius: 2px;
+    margin-left: 5px;
+}
+.imagebox{
+    justify-content: center;
+    margin-top: 20px;
+    width: 50px;
+    margin-right: 20px;
+    
+}
+
+.image{
+    width: 100px;
+    height: 50px;
+    object-fit: contain;
+    margin-top: 15px;
+    border-radius: 5px;
+ 
+
+}

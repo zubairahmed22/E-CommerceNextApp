@@ -1,7 +1,68 @@
 .container {
-  padding: 0 2rem;
+  /* padding: 0 2rem; */
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 10px;
+  margin-bottom: 70px;
+  
 }
 
+.productContainer{
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  width: 94%;
+  
+  
+}
+.imageContainer{
+ width: 100%;
+ background-color: rgb(211, 122, 255);
+ background: url('../public/Banner_pic.jpg');
+ background-repeat: no-repeat;
+ background-size: cover;
+ padding-top: 100px;
+ padding-bottom: 300px;
+ margin-top: 7px;
+ position: static;
+
+  
+
+ 
+}
+
+.imageContainer > h1{
+  margin-left: 55px;
+  color: white;
+  font-size: 40px;
+  position: absolute;
+  margin-top: -30px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.image_hero{
+  width: 100%;
+;
+  background-repeat: no-repeat;
+  background-position:center;
+  background-size:cover;
+  height: 300px;
+  margin-top: 5px;
+  position: initial;
+
+  
+}
+
+#hideMeAfter5Seconds{
+ justify-content: center;
+}
+.success{
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+ 
+}
 .main {
   min-height: 100vh;
   padding: 4rem 0;

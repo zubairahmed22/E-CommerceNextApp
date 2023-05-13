@@ -1,0 +1,30 @@
+
+.admain{
+    display: flex;
+    width: 90%;
+    margin: auto;
+    margin-top: 50px;
+}
+.rightBar{
+    background-color: rgb(201, 150, 248);
+    flex: 1;
+    align-items: center;
+}
+.leftbar{
+    flex: 0.3;
+    background-color: rgb(233, 233, 241);
+}
+.leftbar > p{
+    padding-left: 10px;
+    font-size: 16px;
+    border-bottom: 1px solid lightgray;
+    padding-bottom: 10px;
+    padding-top: 7px;
+    
+}
+.leftbar > p:hover{
+    background-color: blueviolet;
+    padding-top: 40;
+    padding-bottom: 40;
+    color: white;
+}

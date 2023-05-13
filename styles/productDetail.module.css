@@ -1,0 +1,231 @@
+.main{
+    display:  flex;
+    flex-direction: row;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 40px;
+}
+.image{
+    
+    width: 600px;
+    height: 400px;
+    object-fit: contain;
+}
+.stokcolor{
+    color: red;
+}
+
+.contentBox{
+    margin-left: 30px;
+    margin-top: 10px;
+}
+.contentBox > p{
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.cartButton{
+    width: 170px;
+    height: 35px;
+    border: none;
+    background-color: blueviolet;
+    color: white;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+
+.textfield{
+    width: 300px;
+    height: 35px;
+    margin-top: 10px;
+    border: none;
+    background-color: rgb(235, 234, 234);
+    border-radius: 5px;
+    outline: none;
+    padding-left: 3px;
+}
+.subtotal{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 0px;
+    
+}
+.subtotal1{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: -10px;
+    padding: 0px;
+    margin-top: -30px;
+
+    
+}
+
+.subtotal2{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 20px;
+    margin-right: 20px;
+     height: 20px;
+    padding: 0;
+    margin-top: -30px;
+    
+    border-bottom: 1px  dashed blueviolet;
+}
+.subtotal > h5{
+    color: rgb(173, 171, 171)
+}
+.subtotal1 > h5{
+    color: rgb(173, 171, 171);
+ 
+}
+.subtotal2 > h5{
+    color: rgb(173, 171, 171);
+ 
+}
+.subtotal > h6{
+    font-weight: 800;
+
+}
+.subtotal1 > h6{
+    font-weight: 800;
+
+}
+.subtotal2 > h6{
+    font-weight: 800;
+
+}
+.buttonDev{
+    display: flex;
+    margin-top: 30px;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-bottom: 20px
+}
+.paymentBtn{
+    width: 100%;
+    background-color: blueviolet;
+    border: none;
+    border-radius: 3px;
+    height: 30px;
+    color: white;
+    font-size: 15px;
+    margin-top: 10px;
+    cursor: pointer;
+    margin-bottom: 50px;
+}
+
+
+.shopingText{
+    margin-left: 15px;
+    border-bottom: 1px solid lightgray;
+    margin-top: 10px;
+    padding-bottom: 5px;
+}
+.cartContainer > span{
+ position: absolute;
+ right: 0;
+ top: 0;
+ cursor: pointer;
+
+ margin-right: 20px;
+}
+.cartContainer > h4 {
+    margin-left: 10px;
+}
+
+.cartImg{
+   width: 70px;
+   height: 40px;
+   display: flex;
+   background-color: lightgray;
+   align-items: center;
+   border-radius: 3px;
+   margin-left: 10px;
+   
+   
+}
+.imgSize{
+    width: 100px;
+    height: 35px;
+    object-fit: contain;
+    border-radius: 5px;
+}
+.fontSize{
+    font-size: 14px;
+    font-weight: 700;
+    margin-top: -5px;
+}
+.discription{
+margin-top: -30px;
+font-size: 13px;
+color: rgb(124, 124, 124);
+}
+.priceContainer{
+   margin-left: 20px;
+   margin-top: 10px;
+}
+.superContainer{
+    display: flex;
+    flex: 1.0;
+    flex-direction: column;
+   
+    border-bottom: 1px solid lightgray;
+    height: 90px;
+}
+.checkout{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 15px;
+}
+.btn{
+    background-color: blueviolet;
+    border: 1px solid lightgray;
+    color: white;
+    font-size: 16px;
+    font-weight: 7;
+    border-radius: 3px;
+    margin-left: 4px;
+    margin-right: 4px;
+    cursor: pointer;
+    
+}
+.secondContainer{
+    margin-left: 10px;
+}
+.thridContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-right: 20px;
+    
+}
+.main{
+    display: flex;
+    flex: 1.0;
+    flex-direction: row;
+    margin-top: 10px;
+    margin-left: 10px;
+    height: 100px;
+    
+}
+.number{
+    position: absolute;
+    left: 0;
+    margin-left: 15px ;
+    background-color: red;
+    width: 18px;
+    height: 18px;
+    border-radius:100%;
+    color: white;
+    text-align: center;
+    margin-top: -25px;
+   
+    
+  
+}

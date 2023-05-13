@@ -1,0 +1,25 @@
+.dev{
+    margin-top: 200px;
+    display: flex;
+    margin: auto;
+   
+}
+.listdiv{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    margin-top: 50px;
+}
+.allctegoy{
+    background-color: rgb(240, 232, 248);
+    width: 500px;
+    margin-top: 20px;
+    padding: 5px;
+    display: flex;
+    justify-content: space-around;
+    box-shadow: 2px 0px 2px 0px lightgray;
+    border-radius: 5px;
+}
+.edit{
+    margin-left: 60px;
+}

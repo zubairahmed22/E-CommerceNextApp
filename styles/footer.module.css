@@ -1,0 +1,18 @@
+.footer{
+    display: flex;
+    justify-content: center;
+
+    background-color: rgb(225, 222, 226);
+  
+   position: static;
+    width: 100%;
+    bottom: 0px;
+    margin-top: 500px;
+     
+}
+
+.footer > p{
+    margin: 10px;
+    color: rgb(77, 75, 75);
+    font-size: 15px;
+}
