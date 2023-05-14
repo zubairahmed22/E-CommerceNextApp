@@ -16,7 +16,7 @@ const orders = ({orderData}) => {
        
           <div className={styles.main} key={index}>
           
-          <div className={styles.mainContainer}>
+          <div className={styles.mainContainer} >
          
             <div  className={styles.lisproduct} >
             <div className={styles.item} >
@@ -46,10 +46,10 @@ const orders = ({orderData}) => {
            <div className={styles.imagebox}>
            <h5>products</h5>
         
-            {order.products.map((item) => {
+            {order.products.map((item, index) => {
             let data = JSON.parse(item)
-            console.log(data)
-            return <div className={styles.listITem}>
+           
+            return <div className={styles.listITem} key={index}> 
              <p>{data.price_data.product_data.name.substring(0,10)}</p>
              <h5>({data.quantity})</h5>
             

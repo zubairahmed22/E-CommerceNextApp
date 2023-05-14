@@ -45,7 +45,7 @@ const addProduct = () =>{
          // Will pass `?lang=en` as query param
     }}  passHref> 
       
-        <img src={image} className={Styles.IGM} />
+        <img src={image} className={Styles.IGM} alt='product image' />
         
         </Link>
         <h4 className={Styles.name}>{name}</h4>

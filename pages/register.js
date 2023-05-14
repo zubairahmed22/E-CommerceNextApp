@@ -8,7 +8,7 @@ import {toast}from "react-toastify"
 
 import { useContext} from 'react'
 import { UserContext } from '../Context'
-const register = () => {
+const Register = () => {
   const [name,setName] = useState('')
   const [email,setEmail] = useState('')
   const [password,setPassword] = useState('')
@@ -129,4 +129,4 @@ window.localStorage.setItem("user",JSON.stringify(parsedData.parsedData))
   )
 }
 
-export default register
+export default Register

@@ -4,7 +4,7 @@ import { UserContext } from '../Context'
 import { useContext } from 'react'
 import { toast } from 'react-toastify'
 import {parseCookies}from "nookies"
-const profile = () => {
+const Profile = () => {
   const [email,setEmail] =  useState('')
   const [name,setName] = useState('')
   const [password,setPassword] = useState('')
@@ -60,7 +60,7 @@ const profile = () => {
     
 
     }
-   },[changeState && changeState])
+   },[user && user])
   return (
     <>
     <div className={styles.container} >
@@ -104,4 +104,4 @@ const profile = () => {
   )
 }
 
-export default profile
+export default Profile

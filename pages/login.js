@@ -7,7 +7,7 @@ import {toast}from "react-toastify"
 import Cookies from 'js-cookie'
 import {parseCookies} from "nookies"
 
- const login = () => {
+ const Login = () => {
     const [email,setEmail] = useState('')
     const [password,setPassword] = useState('')
   
@@ -108,7 +108,7 @@ import {parseCookies} from "nookies"
   )
 }
 
-  export default login
+  export default Login
 
   export async function getServerSideProps(ctx){
 

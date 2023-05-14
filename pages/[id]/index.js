@@ -5,7 +5,7 @@ import { useRouter } from 'next/router'
 
 import { UserContext } from '../../Context'
 import dynamic from "next/dynamic";
-const details = ({productItem}) => {
+const Details = ({productItem}) => {
 
  
   
@@ -58,7 +58,7 @@ const {selectedProduct,setSlectedProduct} =  useContext(UserContext)
   )
 }
 
-export default dynamic (() => Promise.resolve(details), {ssr: false})
+export default dynamic (() => Promise.resolve(Details), {ssr: false})
 
 
 export async function getServerSideProps({params}){

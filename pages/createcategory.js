@@ -2,9 +2,9 @@ import React , {useState}from'react'
 import styles from "../styles/Register.module.css"
 import {toast}from "react-toastify"
 import {parseCookies}from "nookies"
-import { useRouter } from 'next/router'
-const createcategory = () => {
-  const router = useRouter()
+
+const Createcategory = () => {
+
 const [category,setCategory] = useState('')
   
 const addCategory = async() =>{
@@ -97,4 +97,4 @@ if(token  && user.user_role !== 1){
 }
 
 
-export default createcategory
+export default Createcategory

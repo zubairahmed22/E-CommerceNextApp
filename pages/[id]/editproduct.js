@@ -104,7 +104,7 @@ const parsedData =  await response.json();
      
     
       
-        <div style={{display: "flex", flexDirection: "row"}}> <img className={styles.imgstyle} src={image}/>
+        <div style={{display: "flex", flexDirection: "row"}}> <image className={styles.imgstyle} src={image} alt='image'/>
         <CameraTwoTone  style={{ fontSize: '30px', color: '#08c',position: 'absolute', marginLeft: "250px", marginTop: '80px' }}/></div>   
       
     

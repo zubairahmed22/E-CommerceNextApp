@@ -55,7 +55,7 @@ const allProduct = ({product}) => {
        </div>
        <div className={styles.imagebox}>
      
-      <img src={product.product_img}alt="image" className={styles.image}/>
+      <image src={product.product_img}alt="image" className={styles.image}/>
       </div>
       <div className={styles.button}>
 

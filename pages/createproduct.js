@@ -9,7 +9,7 @@ import dynamic from "next/dynamic";
 
 
 
-const product = ({newcate}) => {
+const Product = ({newcate}) => {
 
 
 
@@ -104,7 +104,7 @@ const parsedData =  await response.json();
      
     
       {
-        image && image ? <img className={styles.imgstyle} src={image}/> :      <CameraTwoTone  style={{ fontSize: '30px', color: '#08c',marginLeft: '230px', position: "absolute", marginTop: '10px' }}/>
+        image && image ? <image className={styles.imgstyle} src={image}/> :      <CameraTwoTone  style={{ fontSize: '30px', color: '#08c',marginLeft: '230px', position: "absolute", marginTop: '10px' }}/>
       }
     
 
@@ -198,7 +198,7 @@ const parsedData =  await response.json();
 
 
   
-export default dynamic (() => Promise.resolve(product), {ssr: false})
+export default dynamic (() => Promise.resolve(Product), {ssr: false})
 
 export async function getServerSideProps(ctx) {
   const resp = await fetch('http://localhost:3000/api/category',{
