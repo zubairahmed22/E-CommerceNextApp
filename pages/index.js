@@ -18,7 +18,7 @@ export default function Home({product}) {
     setSlectedProduct([])
     setSuccess(true)
   }
-  }, [])
+  }, [selectedProduct])
 
 
   return (
