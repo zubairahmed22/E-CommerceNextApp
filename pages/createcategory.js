@@ -8,10 +8,10 @@ const Createcategory = () => {
 const [category,setCategory] = useState('')
   
 const addCategory = async() =>{
-  const url = process.env.NODE_ENV === "development"?process.env.LOCAL_URL:process.env.BASE_URL
+  
   try {
     const content = {category}
-    const data = await fetch(`${url}/api/category`,{
+    const data = await fetch('http://localhost:3000/api/category',{
       method:"POST",
       headers: {
         'Content-Type': 'application/json'
