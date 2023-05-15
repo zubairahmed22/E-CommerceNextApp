@@ -201,7 +201,8 @@ const parsedData =  await response.json();
 export default dynamic (() => Promise.resolve(Product), {ssr: false})
 
 export async function getServerSideProps(ctx) {
-  const resp = await fetch('http://localhost:3000/api/category',{
+  const url = process.env.NODE_ENV === "development"?process.env.LOCAL_URL:process.env.BASE_URL
+  const resp = await fetch(`${url}/api/category`,{
     method: "GET"
   }
   )
