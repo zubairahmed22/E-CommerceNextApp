@@ -1,5 +1,5 @@
 
-import styles from "../styles/manageproduct.module.css"
+import styles from "../styles/manageProduct.module.css"
 import {DeleteTwoTone } from "@ant-design/icons"
 import {EditTwoTone } from "@ant-design/icons"
 import Link from 'next/link'

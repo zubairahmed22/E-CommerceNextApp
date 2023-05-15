@@ -57,6 +57,7 @@ CREATE TABLE orders(
     user_address varchar,
     paid INT DEFAULT '0',
     user_city varchar,
+    phone_no varchar(15) NOT NULL,
     created_at TIME DEFAULT CURRENT_TIME,
     created_on DATE DEFAULT CURRENT_DATE
 );
