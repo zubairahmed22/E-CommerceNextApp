@@ -2,13 +2,15 @@ import { conn } from './db';
 import {buffer}from "micro"
 
 const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
-export default async function handler(req,res)
-let  signingSecret = 'whsec_9e330dc6cc024c73265012e5d4c1e41dadd38d00bfd6bfc6d45f74fe6d2af46a'
+export default async function handler(req,res){
+
+
+const signingSecret = 'whsec_9e330dc6cc024c73265012e5d4c1e41dadd38d00bfd6bfc6d45f74fe6d2af46a';
 const  payload = await buffer(req);
 const  signature = req.headers['stripe-signature'];
 
 
- const event = stripe.webhooks.constructEvent(payload,signature, signingSecret)
+ const event = stripe.webhooks.constructEvent(payload,signature,signingSecret)
  if(event?.type === 'checkout.session.completed'){
     console.log(event)
    const  metadata = event.data?.object?.metadata;
@@ -28,7 +30,7 @@ const  signature = req.headers['stripe-signature'];
  
 
 
-
+}
    }
 export const config = {
     api:{
