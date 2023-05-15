@@ -58,7 +58,8 @@ export default function Home({product}) {
   )
 }
 export  async function getServerSideProps(context){
-  const res = await fetch('http://localhost:3000/api/products',{
+  const url = process.env.NODE_ENV === "production"? process.env.BASE_URL:process.env.LOCAL_URL
+  const res = await fetch(`${url}/api/products`,{
     method: "GET"
   }
   )
