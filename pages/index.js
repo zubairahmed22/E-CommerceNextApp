@@ -9,7 +9,9 @@ import { UserContext } from '../Context'
 export default function Home({product}) {
  
   const [success,setSuccess] = useState(false)
+  /* eslint-disable no-use-before-define */
   const {selectedProduct,setSlectedProduct} = useContext(UserContext)
+
 
   useEffect(() => {
 
@@ -21,6 +23,7 @@ export default function Home({product}) {
   }, [selectedProduct])
 
 
+/* eslint-enable no-use-before-define */
   return (
     
     <div className={styles.container}>
