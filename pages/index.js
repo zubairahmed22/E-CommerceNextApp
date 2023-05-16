@@ -59,7 +59,7 @@ export default function Home({product}) {
 }
 export  async function getServerSideProps(context){
 
-  const res = await fetch(`${API}/api/products`,{
+  const res = await fetch(`/api/products`,{
     method: "GET"
   }
   )
