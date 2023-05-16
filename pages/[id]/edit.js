@@ -79,7 +79,7 @@ const updateCategory = async() =>{
 export async function getServerSideProps({params}) {
   const id = params.id
   console.log(id)
-  const res = await fetch(`http://localhost:3000/api/cate/${id}`,{
+  const res = await fetch(`/api/cate/${id}`,{
     method: "GET"
   }
   )

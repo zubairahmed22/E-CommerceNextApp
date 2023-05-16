@@ -63,7 +63,7 @@ const Navbar = () => {
     useEffect(() =>{
     const uniqId =  [...new Set(selectedProduct)]
     console.log('checking uniqID',uniqId)
-     fetch('http://localhost:3000/api/cartId?ids='+ uniqId.join(','))
+     fetch('/api/cartId?ids='+ uniqId.join(','))
     .then((response) => response.json())
     .then((data) => setIdPorduct(data))
      console.log("all product",idProduct)

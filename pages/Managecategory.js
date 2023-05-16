@@ -13,7 +13,7 @@ const Managecategory = ({newcate}) => {
   
 const handleDelete =  async(id) =>{
 try {
-  const deleteCate =  await fetch(`http://localhost:3000/api/cate/${id}`,{
+  const deleteCate =  await fetch(`/api/cate/${id}`,{
     method: "DELETE"
   })
 } catch (error) {

@@ -6,7 +6,7 @@ import {toast}from "react-toastify"
 import {CameraTwoTone}from "@ant-design/icons"
 import {parseCookies}from "nookies"
 import dynamic from "next/dynamic";
-
+import API from "../Component/Backend"
 
 
 const Product = ({newcate}) => {
@@ -33,7 +33,7 @@ const formData = new FormData()
 formData.append('image', file)
 
 try {
-  const data = await fetch('http://localhost:3000/api/imagefile',{
+  const data = await fetch(`${API}/api/imagefile`,{
     method: "POST",
     
     body: formData
@@ -201,8 +201,8 @@ const parsedData =  await response.json();
 export default dynamic (() => Promise.resolve(Product), {ssr: false})
 
 export async function getServerSideProps(ctx) {
-  const url = process.env.NODE_ENV === "development"?process.env.LOCAL_URL:process.env.BASE_URL
-  const resp = await fetch(`${url}/api/category`,{
+
+  const resp = await fetch(`/api/category`,{
     method: "GET"
   }
   )

@@ -26,7 +26,7 @@ const Profile = () => {
     try {
     
       
-      const response = await fetch('http://localhost:3000/api/profile-update',{
+      const response = await fetch('/api/profile-update',{
         method: "PUT",
         headers: {
           'Content-Type': 'application/json'

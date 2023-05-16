@@ -12,7 +12,7 @@ const allProduct = ({product}) => {
   const handleDelete =  async(id) =>{
     console.log(id)
     try {
-      const deleteCate =  await fetch(`http://localhost:3000/api/pro/${id}`,{
+      const deleteCate =  await fetch(`/api/pro/${id}`,{
         method: "DELETE"
       })
     } catch (error) {

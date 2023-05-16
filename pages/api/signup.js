@@ -62,7 +62,7 @@ const  handler =  async(req, res) => {
           pass:process.env.PASS
         }
       })
-      const url = `http://localhost:3000/api/email-verify?token=${verificationToken}`
+      const url = `/api/email-verify?token=${verificationToken}`
       let mailOptions = {
         from:"zubair@gmail.com",
         to:email,

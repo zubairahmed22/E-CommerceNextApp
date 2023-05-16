@@ -187,7 +187,7 @@ const parsedData =  await response.json();
 export async function getServerSideProps({params}) {
   const id = params.id
 
-  const res = await fetch(`http://localhost:3000/api/pro/${id}`,{
+  const res = await fetch(`/api/pro/${id}`,{
     method: "GET"
   }
   )
