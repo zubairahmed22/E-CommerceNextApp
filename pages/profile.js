@@ -4,6 +4,7 @@ import { UserContext } from '../Context'
 import { useContext } from 'react'
 import { toast } from 'react-toastify'
 import {parseCookies}from "nookies"
+import { API } from '../Component/Backend'
 const Profile = () => {
   const [email,setEmail] =  useState('')
   const [name,setName] = useState('')
@@ -26,7 +27,7 @@ const Profile = () => {
     try {
     
       
-      const response = await fetch('/api/profile-update',{
+      const response = await fetch(`${API}/api/profile-update`,{
         method: "PUT",
         headers: {
           'Content-Type': 'application/json'

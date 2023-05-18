@@ -7,13 +7,14 @@ import { UserContext } from '../Context'
 import {useRouter} from "next/router"
 import Link from 'next/link'
 import {parseCookies}from "nookies"
+import { API } from '../Component/Backend'
 const Managecategory = ({newcate}) => {
 
   
   
 const handleDelete =  async(id) =>{
 try {
-  const deleteCate =  await fetch(`/api/cate/${id}`,{
+  const deleteCate =  await fetch(`${API}/api/cate/${id}`,{
     method: "DELETE"
   })
 } catch (error) {
@@ -56,7 +57,7 @@ try {
 }
 
 export async function getServerSideProps(ctx) {
-  const res = await fetch('http://localhost:3000/api/category',{
+  const res = await fetch(`${API}/api/category`,{
     method: "GET"
   }
   )

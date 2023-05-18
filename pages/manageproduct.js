@@ -5,6 +5,7 @@ import {EditTwoTone } from "@ant-design/icons"
 import Link from 'next/link'
 import {parseCookies}from "nookies"
 import moment from 'moment';
+import { API } from "../Component/Backend"
 
 const allProduct = ({product}) => {
 
@@ -12,7 +13,7 @@ const allProduct = ({product}) => {
   const handleDelete =  async(id) =>{
     console.log(id)
     try {
-      const deleteCate =  await fetch(`/api/pro/${id}`,{
+      const deleteCate =  await fetch(`${API}/api/pro/${id}`,{
         method: "DELETE"
       })
     } catch (error) {
@@ -71,7 +72,7 @@ const allProduct = ({product}) => {
 }
 
 export  async function getServerSideProps(ctx){
-  const res = await fetch('http://localhost:3000/api/products',{
+  const res = await fetch(`${API}/api/products`,{
     method: "GET"
   }
   )

@@ -4,7 +4,8 @@ import styles from '../styles/Home.module.css'
 import Product from '../Component/Product'
 import { useState,useEffect, useContext} from 'react'
 import { UserContext } from '../Context'
-import API from "../Component/Backend"
+import { API } from '../Component/Backend'
+
 
 export default function Home({product}) {
  
@@ -59,7 +60,7 @@ export default function Home({product}) {
 }
 export  async function getServerSideProps(context){
 
-  const res = await fetch(`/api/products`,{
+  const res = await fetch(`${API}/api/products`,{
     method: "GET"
   }
   )

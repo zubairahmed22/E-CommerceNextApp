@@ -1,6 +1,7 @@
 import {conn} from "./db"
 import jwtGen from "../../jwtgenrate/jwttoken"
 import validator from "../../middleware/validation"
+import { API } from "../../Component/Backend";
 const bcrypt = require('bcrypt')
 
 
@@ -62,7 +63,7 @@ const  handler =  async(req, res) => {
           pass:process.env.PASS
         }
       })
-      const url = `/api/email-verify?token=${verificationToken}`
+      const url = `${API}/api/email-verify?token=${verificationToken}`
       let mailOptions = {
         from:"zubair@gmail.com",
         to:email,

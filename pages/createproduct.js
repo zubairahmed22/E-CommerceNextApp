@@ -55,7 +55,7 @@ setImage(res.url)
       
       const data  =  {name, stok,price, discription,image,cateId}
       
-      const response = await fetch('http://localhost:3000/api/products',{
+      const response = await fetch(`${API}/api/products`,{
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'

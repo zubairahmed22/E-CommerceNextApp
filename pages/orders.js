@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import styles from "../styles/order.module.css"
 import Link from 'next/link'
+import { API } from '../Component/Backend'
 
 const orders = ({orderData}) => {
 
@@ -79,7 +80,7 @@ const orders = ({orderData}) => {
 export default orders
 
 export async function getServerSideProps(contex){
-const order = await fetch('/api/getOrders')
+const order = await fetch(`${API}/api/getOrders`)
 const allOrders = await order.json();
 console.log(allOrders)
 
