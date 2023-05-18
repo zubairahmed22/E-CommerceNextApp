@@ -8,7 +8,7 @@ import {toast}from "react-toastify"
 
 import { useContext} from 'react'
 import { UserContext } from '../Context'
-import { API } from '../Component/Backend';
+import API from '../Component/Backend';
 const Register = () => {
   const [name,setName] = useState('')
   const [email,setEmail] = useState('')

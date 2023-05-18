@@ -5,6 +5,7 @@ import { useRouter } from 'next/router'
 
 import { UserContext } from '../../Context'
 import dynamic from "next/dynamic";
+import API from '../../Component/Backend';
 const Details = ({productItem}) => {
 
  
@@ -65,7 +66,7 @@ export async function getServerSideProps({params}){
   const id = await params.id
 
   try {
-    const singleProduct = await fetch(`/api/pro/${id}`,{
+    const singleProduct = await fetch(`${API}/api/pro/${id}`,{
     method: "GET"
   })
 const product = await singleProduct.json()

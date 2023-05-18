@@ -6,7 +6,7 @@ import {toast}from "react-toastify"
 import {CameraTwoTone}from "@ant-design/icons"
 import {parseCookies}from "nookies"
 import dynamic from "next/dynamic";
-import {API} from "../Component/Backend"
+import API from "../Component/Backend"
 
 
 const Product = ({newcate}) => {

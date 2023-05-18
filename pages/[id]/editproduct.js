@@ -4,6 +4,7 @@ import styles from '../../styles/product.module.css'
 import { useRouter } from "next/router";
 import {toast}from "react-toastify"
 import {CameraTwoTone}from "@ant-design/icons"
+import API from '../../Component/Backend';
 
 
 
@@ -33,7 +34,7 @@ const formData = new FormData()
 formData.append('image', file)
 console.log([... formData])
 try {
-  const data = await fetch('http://localhost:3000/api/imagefile',{
+  const data = await fetch(`${API}/api/imagefile`,{
     method: "POST",
     
     body: formData
@@ -56,7 +57,7 @@ setImage(res.url)
       
       const data  =  {name, stock,pro_price, discription,image}
       
-      const response = await fetch(`http://localhost:3000/api/pro/${id}`,{
+      const response = await fetch(`${API}/api/pro/${id}`,{
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json'

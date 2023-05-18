@@ -5,7 +5,7 @@ import {EditTwoTone } from "@ant-design/icons"
 import Link from 'next/link'
 import {parseCookies}from "nookies"
 import moment from 'moment';
-import { API } from "../Component/Backend"
+import  API  from "../Component/Backend"
 
 const allProduct = ({product}) => {
 

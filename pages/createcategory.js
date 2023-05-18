@@ -2,6 +2,7 @@ import React , {useState}from'react'
 import styles from "../styles/Register.module.css"
 import {toast}from "react-toastify"
 import {parseCookies}from "nookies"
+import API from '../Component/Backend'
 
 const Createcategory = () => {
 
@@ -11,7 +12,7 @@ const addCategory = async() =>{
 
   try {
     const content = {category}
-    const data = await fetch(`/api/category`,{
+    const data = await fetch(`${API}/api/category`,{
       method:"POST",
       headers: {
         'Content-Type': 'application/json'

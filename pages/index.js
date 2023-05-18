@@ -4,7 +4,7 @@ import styles from '../styles/Home.module.css'
 import Product from '../Component/Product'
 import { useState,useEffect, useContext} from 'react'
 import { UserContext } from '../Context'
-import { API } from '../Component/Backend'
+import API  from '../Component/Backend'
 
 
 export default function Home({product}) {

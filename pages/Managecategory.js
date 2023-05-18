@@ -7,7 +7,7 @@ import { UserContext } from '../Context'
 import {useRouter} from "next/router"
 import Link from 'next/link'
 import {parseCookies}from "nookies"
-import { API } from '../Component/Backend'
+import API from '../Component/Backend'
 const Managecategory = ({newcate}) => {
 
   

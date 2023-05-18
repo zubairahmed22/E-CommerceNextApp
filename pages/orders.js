@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import styles from "../styles/order.module.css"
 import Link from 'next/link'
-import { API } from '../Component/Backend'
+import API from '../Component/Backend'
 
 const orders = ({orderData}) => {
 
