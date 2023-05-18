@@ -1,7 +1,7 @@
 import {conn} from "./db"
 import jwtGen from "../../jwtgenrate/jwttoken"
 import validator from "../../middleware/validation"
-import { API } from "../../Component/Backend";
+import  API  from "../../Component/Backend";
 const bcrypt = require('bcrypt')
 
 
