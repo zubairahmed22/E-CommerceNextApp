@@ -6,7 +6,7 @@ import {toast}from "react-toastify"
 import {CameraTwoTone}from "@ant-design/icons"
 import {parseCookies}from "nookies"
 import dynamic from "next/dynamic";
-import API from "../Component/Backend"
+
 
 
 const Product = ({newcate}) => {
@@ -33,6 +33,7 @@ const formData = new FormData()
 formData.append('image', file)
 
 try {
+  const API=process.env.NODE_ENV != "production"? "http://localhost:3000" : "https://e-commerce-next-ap-p.vercel.app"
   const data = await fetch(`${API}/api/imagefile`,{
     method: "POST",
     
@@ -54,7 +55,7 @@ setImage(res.url)
     try {
       
       const data  =  {name, stok,price, discription,image,cateId}
-      
+      const API=process.env.NODE_ENV != "production"? "http://localhost:3000" : "https://e-commerce-next-ap-p.vercel.app"
       const response = await fetch(`${API}/api/products`,{
       method: 'POST',
       headers: {

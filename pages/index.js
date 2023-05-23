@@ -4,11 +4,11 @@ import styles from '../styles/Home.module.css'
 import Product from '../Component/Product'
 import { useState,useEffect, useContext} from 'react'
 import { UserContext } from '../Context'
-import API  from '../Component/Backend'
+
 
 
 export default function Home({product}) {
- console.log(API)
+
   const [success,setSuccess] = useState(false)
   /* eslint-disable no-use-before-define */
   const {selectedProduct,setSlectedProduct} = useContext(UserContext)
@@ -59,7 +59,7 @@ export default function Home({product}) {
   )
 }
 export  async function getServerSideProps(context){
-
+  const API=process.env.NODE_ENV != "production"? "http://localhost:3000" : "https://e-commerce-next-ap-p.vercel.app"
   const res = await fetch(`${API}/api/products`,{
     method: "GET"
   }

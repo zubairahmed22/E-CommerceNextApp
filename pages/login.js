@@ -17,7 +17,8 @@ import API from '../Component/Backend';
     
    const loginSubmit = async(e) =>{
     try {
-    const  data = {email,password}
+      const  data = {email,password}
+      const API=process.env.NODE_ENV != "production"? "http://localhost:3000" : "https://e-commerce-next-ap-p.vercel.app"
       const response = await fetch(`${API}/api/login`,{
         method:"POST",
         headers: {

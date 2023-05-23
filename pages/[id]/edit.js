@@ -2,7 +2,7 @@ import React , {useState}from'react'
 import styles from "../../styles/Register.module.css"
 import {toast}from "react-toastify"
 import {useRouter} from 'next/router'
-import API from '../../Component/Backend'
+
 
 const EditCategory = ({update}) => {
  const {cate_name} = update[0]
@@ -14,6 +14,7 @@ const [category,setCategory] = useState(cate_name)
 const updateCategory = async() =>{
   try {
     const content = {category}
+    const API=process.env.NODE_ENV != "production"? "http://localhost:3000" : "https://e-commerce-next-ap-p.vercel.app"
     const data = await fetch(`${API}/api/cate/${id}`,{
       method:"PUT",
       headers: {
@@ -78,13 +79,13 @@ const updateCategory = async() =>{
 
 export async function getServerSideProps({params}) {
   const id = params.id
-  console.log(id)
+  const API=process.env.NODE_ENV != "production"? "http://localhost:3000" : "https://e-commerce-next-ap-p.vercel.app"
   const res = await fetch(`${API}/api/cate/${id}`,{
     method: "GET"
   }
   )
  const updateData = await res.json()
- console.log(updateData)
+
     return {
       props: {update:updateData}, // will be passed to the page component as props
     }

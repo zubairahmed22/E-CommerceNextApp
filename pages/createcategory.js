@@ -2,7 +2,7 @@ import React , {useState}from'react'
 import styles from "../styles/Register.module.css"
 import {toast}from "react-toastify"
 import {parseCookies}from "nookies"
-import API from '../Component/Backend'
+
 
 const Createcategory = () => {
 
@@ -12,6 +12,7 @@ const addCategory = async() =>{
 
   try {
     const content = {category}
+    const API=process.env.NODE_ENV != "production"? "http://localhost:3000" : "https://e-commerce-next-ap-p.vercel.app"
     const data = await fetch(`${API}/api/category`,{
       method:"POST",
       headers: {

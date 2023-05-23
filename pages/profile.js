@@ -4,7 +4,7 @@ import { UserContext } from '../Context'
 import { useContext } from 'react'
 import { toast } from 'react-toastify'
 import {parseCookies}from "nookies"
-import API from '../Component/Backend'
+
 const Profile = () => {
   const [email,setEmail] =  useState('')
   const [name,setName] = useState('')
@@ -26,7 +26,7 @@ const Profile = () => {
     console.log(data)
     try {
     
-      
+      const API=process.env.NODE_ENV != "production"? "http://localhost:3000" : "https://e-commerce-next-ap-p.vercel.app"
       const response = await fetch(`${API}/api/profile-update`,{
         method: "PUT",
         headers: {

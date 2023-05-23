@@ -5,14 +5,15 @@ import {EditTwoTone } from "@ant-design/icons"
 import Link from 'next/link'
 import {parseCookies}from "nookies"
 import moment from 'moment';
-import  API  from "../Component/Backend"
+
 
 const allProduct = ({product}) => {
 
 
   const handleDelete =  async(id) =>{
-    console.log(id)
+    
     try {
+      const API=process.env.NODE_ENV != "production"? "http://localhost:3000" : "https://e-commerce-next-ap-p.vercel.app"
       const deleteCate =  await fetch(`${API}/api/pro/${id}`,{
         method: "DELETE"
       })
@@ -72,6 +73,7 @@ const allProduct = ({product}) => {
 }
 
 export  async function getServerSideProps(ctx){
+  const API=process.env.NODE_ENV != "production"? "http://localhost:3000" : "https://e-commerce-next-ap-p.vercel.app"
   const res = await fetch(`${API}/api/products`,{
     method: "GET"
   }

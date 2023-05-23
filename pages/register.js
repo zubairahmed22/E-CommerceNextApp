@@ -8,7 +8,7 @@ import {toast}from "react-toastify"
 
 import { useContext} from 'react'
 import { UserContext } from '../Context'
-import API from '../Component/Backend';
+
 const Register = () => {
   const [name,setName] = useState('')
   const [email,setEmail] = useState('')
@@ -25,7 +25,7 @@ const Register = () => {
     try {
       
       const data  =  {name,email,password}
-      
+      const API=process.env.NODE_ENV != "production"? "http://localhost:3000" : "https://e-commerce-next-ap-p.vercel.app"
       const response = await fetch(`${API}/api/signup`,{
       method: 'POST',
       headers: {

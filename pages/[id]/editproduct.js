@@ -4,7 +4,7 @@ import styles from '../../styles/product.module.css'
 import { useRouter } from "next/router";
 import {toast}from "react-toastify"
 import {CameraTwoTone}from "@ant-design/icons"
-import API from '../../Component/Backend';
+
 
 
 
@@ -32,9 +32,9 @@ const handleImage = async(e) =>{
 const file =  e.target.files[0]
 const formData = new FormData()
 formData.append('image', file)
-console.log([... formData])
+const API=process.env.NODE_ENV != "production"? "http://localhost:3000" : "https://e-commerce-next-ap-p.vercel.app"
 try {
-  const data = await fetch(`http://localhost:3000/api/imagefile`,{
+  const data = await fetch(`${API}/api/imagefile`,{
     method: "POST",
     
     body: formData
@@ -56,7 +56,7 @@ setImage(res.url)
     try {
       
       const data  =  {name, stock,pro_price, discription,image}
-      
+      const API=process.env.NODE_ENV != "production"? "http://localhost:3000" : "https://e-commerce-next-ap-p.vercel.app"
       const response = await fetch(`${API}/api/pro/${id}`,{
       method: 'PUT',
       headers: {
@@ -70,7 +70,7 @@ const parsedData =  await response.json();
 
    if(parsedData.error){
     toast.error(parsedData.error)
-    console.log("show error",parsedData.error)
+    
     
    }else{
     toast.success(" product is updated sucessfully")
@@ -187,13 +187,13 @@ const parsedData =  await response.json();
 
 export async function getServerSideProps({params}) {
   const id = params.id
-
+  const API=process.env.NODE_ENV != "production"? "http://localhost:3000" : "https://e-commerce-next-ap-p.vercel.app"
   const res = await fetch(`${API}/api/pro/${id}`,{
     method: "GET"
   }
   )
  const updateData = await res.json()
- console.log(updateData)
+
 
     return {
       props: {update:updateData}, // will be passed to the page component as props

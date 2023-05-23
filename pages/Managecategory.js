@@ -7,13 +7,13 @@ import { UserContext } from '../Context'
 import {useRouter} from "next/router"
 import Link from 'next/link'
 import {parseCookies}from "nookies"
-import API from '../Component/Backend'
 const Managecategory = ({newcate}) => {
 
   
   
 const handleDelete =  async(id) =>{
 try {
+  const API=process.env.NODE_ENV != "production"? "http://localhost:3000" : "https://e-commerce-next-ap-p.vercel.app"
   const deleteCate =  await fetch(`${API}/api/cate/${id}`,{
     method: "DELETE"
   })
@@ -57,6 +57,7 @@ try {
 }
 
 export async function getServerSideProps(ctx) {
+  const API=process.env.NODE_ENV != "production"? "http://localhost:3000" : "https://e-commerce-next-ap-p.vercel.app"
   const res = await fetch(`${API}/api/category`,{
     method: "GET"
   }

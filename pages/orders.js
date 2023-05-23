@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import styles from "../styles/order.module.css"
 import Link from 'next/link'
-import API from '../Component/Backend'
+
 
 const orders = ({orderData}) => {
 
@@ -80,6 +80,7 @@ const orders = ({orderData}) => {
 export default orders
 
 export async function getServerSideProps(contex){
+  const API=process.env.NODE_ENV != "production"? "http://localhost:3000" : "https://e-commerce-next-ap-p.vercel.app"
 const order = await fetch(`${API}/api/getOrders`)
 const allOrders = await order.json();
 console.log(allOrders)
