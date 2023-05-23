@@ -4,7 +4,6 @@ const nextConfig = {
   swcMinify: true,
 }
 
-module.exports = nextConfig
 
 module.exports = {
   async headers() {
@@ -22,6 +21,9 @@ module.exports = {
     ];
   },
 };
+
+
+module.exports = nextConfig
 
 
 
