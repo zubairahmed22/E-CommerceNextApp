@@ -6,6 +6,7 @@ import { UserContext } from '../Context'
 import {toast}from "react-toastify"
 import Cookies from 'js-cookie'
 import {parseCookies} from "nookies"
+import API from '../Component/Backend';
 
  const Login = () => {
     const [email,setEmail] = useState('')
@@ -17,7 +18,7 @@ import {parseCookies} from "nookies"
    const loginSubmit = async(e) =>{
     try {
     const  data = {email,password}
-      const response = await fetch('http://localhost:3000/api/login',{
+      const response = await fetch(`${API}/api/login`,{
         method:"POST",
         headers: {
           'Content-Type': 'application/json'

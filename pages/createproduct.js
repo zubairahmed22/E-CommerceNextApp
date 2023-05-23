@@ -33,7 +33,7 @@ const formData = new FormData()
 formData.append('image', file)
 
 try {
-  const data = await fetch(`http://localhost:3000/api/imagefile`,{
+  const data = await fetch(`${API}/api/imagefile`,{
     method: "POST",
     
     body: formData
@@ -55,7 +55,7 @@ setImage(res.url)
       
       const data  =  {name, stok,price, discription,image,cateId}
       
-      const response = await fetch(`http://localhost:3000/api/products`,{
+      const response = await fetch(`${API}/api/products`,{
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'

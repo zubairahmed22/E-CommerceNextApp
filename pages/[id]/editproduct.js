@@ -57,7 +57,7 @@ setImage(res.url)
       
       const data  =  {name, stock,pro_price, discription,image}
       
-      const response = await fetch(`http://localhost:3000/api/pro/${id}`,{
+      const response = await fetch(`${API}/api/pro/${id}`,{
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json'
@@ -188,7 +188,7 @@ const parsedData =  await response.json();
 export async function getServerSideProps({params}) {
   const id = params.id
 
-  const res = await fetch(`http://localhost:3000/api/pro/${id}`,{
+  const res = await fetch(`${API}/api/pro/${id}`,{
     method: "GET"
   }
   )

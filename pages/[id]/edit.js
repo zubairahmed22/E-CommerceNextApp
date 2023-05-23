@@ -14,7 +14,7 @@ const [category,setCategory] = useState(cate_name)
 const updateCategory = async() =>{
   try {
     const content = {category}
-    const data = await fetch(`http://localhost:3000/api/cate/${id}`,{
+    const data = await fetch(`${API}/api/cate/${id}`,{
       method:"PUT",
       headers: {
         'Content-Type': 'application/json'
@@ -79,7 +79,7 @@ const updateCategory = async() =>{
 export async function getServerSideProps({params}) {
   const id = params.id
   console.log(id)
-  const res = await fetch(`http://localhost:3000/api/cate/${id}`,{
+  const res = await fetch(`${API}/api/cate/${id}`,{
     method: "GET"
   }
   )

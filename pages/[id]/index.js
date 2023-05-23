@@ -66,7 +66,7 @@ export async function getServerSideProps({params}){
   const id = await params.id
 
   try {
-    const singleProduct = await fetch(`http://localhost:3000/api/pro/${id}`,{
+    const singleProduct = await fetch(`${API}/api/pro/${id}`,{
     method: "GET"
   })
 const product = await singleProduct.json()
