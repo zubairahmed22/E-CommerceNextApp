@@ -19,7 +19,7 @@ import API from '../Component/Backend';
     try {
       const  data = {email,password}
       const API=process.env.NODE_ENV != "production"? "http://localhost:3000" : "https://e-commerce-next-ap-f5tk8s28p-zubairahmed22.vercel.app/"
-      const response = await fetch(`/api/login`,{
+      const response = await fetch(`${API}/api/login`,{
         method:"POST",
         headers: {
           'Content-Type': 'application/json'

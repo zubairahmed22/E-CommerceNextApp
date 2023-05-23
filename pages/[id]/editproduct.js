@@ -34,7 +34,7 @@ const formData = new FormData()
 formData.append('image', file)
 const API=process.env.NODE_ENV != "production"? "http://localhost:3000" : "https://e-commerce-next-ap-p.vercel.app"
 try {
-  const data = await fetch(`/api/imagefile`,{
+  const data = await fetch(`${API}/api/imagefile`,{
     method: "POST",
     
     body: formData

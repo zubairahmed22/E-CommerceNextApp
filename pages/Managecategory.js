@@ -14,7 +14,7 @@ const Managecategory = ({newcate}) => {
 const handleDelete =  async(id) =>{
 try {
   const API=process.env.NODE_ENV != "production"? "http://localhost:3000" : "https://e-commerce-next-ap-p.vercel.app"
-  const deleteCate =  await fetch(`/api/cate/${id}`,{
+  const deleteCate =  await fetch(`${API}/api/cate/${id}`,{
     method: "DELETE"
   })
 } catch (error) {
