@@ -5,7 +5,7 @@ import { useRouter } from 'next/router'
 
 import { UserContext } from '../../Context'
 import dynamic from "next/dynamic";
-import API from '../../Component/Backend';
+// import API from '../../Component/Backend';
 const Details = ({productItem}) => {
 
  
@@ -64,7 +64,7 @@ export default dynamic (() => Promise.resolve(Details), {ssr: false})
 
 export async function getServerSideProps({params}){
   const id = await params.id
-
+  const API=process.env.NODE_ENV != "production"? "http://localhost:3000" : "https://e-commerce-next-ap-p.vercel.app"
   try {
     const singleProduct = await fetch(`${API}/api/pro/${id}`,{
     method: "GET"
