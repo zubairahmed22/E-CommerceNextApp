@@ -6,7 +6,6 @@ import API from '../../Component/Backend'
 
 const EditCategory = ({update}) => {
  const {cate_name} = update[0]
- console.log("finding name",cate_name)
   const router = useRouter()
   const id = router.query.id
 
@@ -15,7 +14,7 @@ const [category,setCategory] = useState(cate_name)
 const updateCategory = async() =>{
   try {
     const content = {category}
-    const data = await fetch(`${API}/api/cate/${id}`,{
+    const data = await fetch(`http://localhost:3000/api/cate/${id}`,{
       method:"PUT",
       headers: {
         'Content-Type': 'application/json'
@@ -80,7 +79,7 @@ const updateCategory = async() =>{
 export async function getServerSideProps({params}) {
   const id = params.id
   console.log(id)
-  const res = await fetch(`${API}/api/cate/${id}`,{
+  const res = await fetch(`http://localhost:3000/api/cate/${id}`,{
     method: "GET"
   }
   )

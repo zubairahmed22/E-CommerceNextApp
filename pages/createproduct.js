@@ -33,7 +33,7 @@ const formData = new FormData()
 formData.append('image', file)
 
 try {
-  const data = await fetch(`${API}/api/imagefile`,{
+  const data = await fetch(`http://localhost:3000/api/imagefile`,{
     method: "POST",
     
     body: formData
@@ -55,7 +55,7 @@ setImage(res.url)
       
       const data  =  {name, stok,price, discription,image,cateId}
       
-      const response = await fetch(`${API}/api/products`,{
+      const response = await fetch(`http://localhost:3000/api/products`,{
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -104,7 +104,7 @@ const parsedData =  await response.json();
      
     
       {
-        image && image ? <image className={styles.imgstyle} src={image}/> :      <CameraTwoTone  style={{ fontSize: '30px', color: '#08c',marginLeft: '230px', position: "absolute", marginTop: '10px' }}/>
+        image && image ? <img className={styles.imgstyle} src={image}/> :      <CameraTwoTone  style={{ fontSize: '30px', color: '#08c',marginLeft: '230px', position: "absolute", marginTop: '10px' }}/>
       }
     
 
@@ -202,7 +202,7 @@ export default dynamic (() => Promise.resolve(Product), {ssr: false})
 
 export async function getServerSideProps(ctx) {
 
-  const resp = await fetch(`/api/category`,{
+  const resp = await fetch(`http://localhost:3000/api/category`,{
     method: "GET"
   }
   )

@@ -80,7 +80,7 @@ const orders = ({orderData}) => {
 export default orders
 
 export async function getServerSideProps(contex){
-const order = await fetch(`${API}/api/getOrders`)
+const order = await fetch(`http://localhost:3000/api/getOrders`)
 const allOrders = await order.json();
 console.log(allOrders)
 

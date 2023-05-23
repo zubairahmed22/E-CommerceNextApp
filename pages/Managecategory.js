@@ -14,7 +14,7 @@ const Managecategory = ({newcate}) => {
   
 const handleDelete =  async(id) =>{
 try {
-  const deleteCate =  await fetch(`${API}/api/cate/${id}`,{
+  const deleteCate =  await fetch(`http://localhost:3000/api/cate/${id}`,{
     method: "DELETE"
   })
 } catch (error) {
@@ -57,7 +57,7 @@ try {
 }
 
 export async function getServerSideProps(ctx) {
-  const res = await fetch(`${API}/api/category`,{
+  const res = await fetch(`http://localhost:3000/api/category`,{
     method: "GET"
   }
   )

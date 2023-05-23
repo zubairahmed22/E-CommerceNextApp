@@ -8,7 +8,7 @@ import API  from '../Component/Backend'
 
 
 export default function Home({product}) {
- 
+ console.log(API)
   const [success,setSuccess] = useState(false)
   /* eslint-disable no-use-before-define */
   const {selectedProduct,setSlectedProduct} = useContext(UserContext)
@@ -60,7 +60,7 @@ export default function Home({product}) {
 }
 export  async function getServerSideProps(context){
 
-  const res = await fetch(`${API}/api/products`,{
+  const res = await fetch(`http://localhost:3000/api/products`,{
     method: "GET"
   }
   )

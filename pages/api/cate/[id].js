@@ -2,7 +2,7 @@ import { conn } from "../db"
 
 // get a unique record, edit , delete 
 
-export default categoryid = async(req,res) =>{
+    const  categoryid = async(req,res) =>{
     const {method, 
         query: {id}
         } = req
@@ -91,3 +91,5 @@ export default categoryid = async(req,res) =>{
        
     }
 }
+
+export default categoryid

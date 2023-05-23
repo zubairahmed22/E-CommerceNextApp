@@ -12,7 +12,7 @@ const addCategory = async() =>{
 
   try {
     const content = {category}
-    const data = await fetch(`${API}/api/category`,{
+    const data = await fetch(`/api/category`,{
       method:"POST",
       headers: {
         'Content-Type': 'application/json'

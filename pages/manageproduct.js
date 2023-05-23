@@ -13,7 +13,7 @@ const allProduct = ({product}) => {
   const handleDelete =  async(id) =>{
     console.log(id)
     try {
-      const deleteCate =  await fetch(`${API}/api/pro/${id}`,{
+      const deleteCate =  await fetch(`http://localhost:3000/api/pro/${id}`,{
         method: "DELETE"
       })
     } catch (error) {
@@ -72,7 +72,7 @@ const allProduct = ({product}) => {
 }
 
 export  async function getServerSideProps(ctx){
-  const res = await fetch(`${API}/api/products`,{
+  const res = await fetch(`http://localhost:3000/api/products`,{
     method: "GET"
   }
   )
