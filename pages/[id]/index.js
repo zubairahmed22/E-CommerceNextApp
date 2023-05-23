@@ -66,7 +66,7 @@ export async function getServerSideProps({params}){
   const id = await params.id
   const API=process.env.NODE_ENV != "production"? "http://localhost:3000" : "https://e-commerce-next-ap-p.vercel.app"
   try {
-    const singleProduct = await fetch(`${API}/api/pro/${id}`,{
+    const singleProduct = await fetch(`/api/pro/${id}`,{
     method: "GET"
   })
 const product = await singleProduct.json()

@@ -26,7 +26,7 @@ const Register = () => {
       
       const data  =  {name,email,password}
       const API=process.env.NODE_ENV != "production"? "http://localhost:3000" : "https://e-commerce-next-ap-f5tk8s28p-zubairahmed22.vercel.app/"
-      const response = await fetch(`${API}/api/signup`,{
+      const response = await fetch(`/api/signup`,{
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
