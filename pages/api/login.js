@@ -1,5 +1,5 @@
 import {conn} from "./db"
-import allowCors from "../../middleware/allowCors"
+
 const bcrypt = require('bcrypt')
 import jwtGen from "../../jwtgenrate/jwttoken"
 
