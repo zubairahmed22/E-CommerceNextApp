@@ -59,7 +59,7 @@ export default function Home({product}) {
   )
 }
 export  async function getServerSideProps(context){
-  const API=process.env.NODE_ENV != "production"? "http://localhost:3000" : "https://stirring-concha-23486f.netlify.app"
+  const API=process.env.NODE_ENV != "production"? "http://localhost:3000":"https://stirring-concha-23486f.netlify.app"
   const res = await fetch(`${API}/api/products`,{
     method: "GET"
   }
