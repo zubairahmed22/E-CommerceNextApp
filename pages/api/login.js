@@ -52,4 +52,4 @@ function validEmail(email) {
     
   }
 
-  export default authorize(allowCors(handler)) 
+  export default authorize(handler) 
