@@ -5,10 +5,32 @@ import jwtGen from "../../jwtgenrate/jwttoken"
 
 
 import authorize from "../../middleware/auth"
+
+import Cors from 'cors';
+
+// Initialize the CORS middleware
+const cors = Cors({
+  methods: ['GET', 'POST','HEAD'], // Specify the allowed HTTP methods
+  origin: 'https://e-commerce-next-ap-p.vercel.app' // Replace with the actual origin of your Next.js app
+});
+
+// Helper method to enable CORS for the API route
+function runMiddleware(req, res, fn) {
+  return new Promise((resolve, reject) => {
+    fn(req, res, (result) => {
+      if (result instanceof Error) {
+        return reject(result);
+      }
+
+      return resolve(result);
+    });
+  });
+}
 function validEmail(email) {
   return  /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email);
 }
- async function  handler(req, res) {
+ async function  handler(req, res,) {
+  await runMiddleware(req, res, cors);
         if(req.method == "POST"){
             try {
                 // 1 destructure the req.body 
