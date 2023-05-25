@@ -11,7 +11,7 @@ import Cors from 'cors';
 // Initialize the CORS middleware
 const cors = Cors({
   methods: ['GET', 'POST','HEAD'], // Specify the allowed HTTP methods https://e-commerce-next-ap-p.vercel.app
-  origin: 'https://e-commerce-next-ap-f5tk8s28p-zubairahmed22.vercel.app' // Replace with the actual origin of your Next.js app
+  origin: '*' // Replace with the actual origin of your Next.js app
 });
 
 // Helper method to enable CORS for the API route
