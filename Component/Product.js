@@ -8,7 +8,7 @@ import Link from 'next/link'
 import dynamic from "next/dynamic";
 
 const Product = ({price,dis,image,name,id}) => {
-  
+  console.log("product id", id)
   const router = useRouter();
   
   

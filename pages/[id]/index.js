@@ -64,16 +64,18 @@ export default dynamic (() => Promise.resolve(Details), {ssr: false})
 
 export async function getServerSideProps({params}){
   const id = await params.id
+  
   const API=process.env.NODE_ENV != "production"? "http://localhost:3000" : "https://e-commerce-next-ap-p.vercel.app"
   try {
     const singleProduct = await fetch(`/api/pro/${id}`,{
     method: "GET"
   })
 const product = await singleProduct.json()
+console.log(product)
 
 
-return {
-  props: {productItem:product}, // will be passed to the page component as props
+return{
+  props:{productItem:product}, // will be passed to the page component as props
 }
   } catch (error) {
     console.log(error)

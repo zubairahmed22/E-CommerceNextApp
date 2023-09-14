@@ -7,7 +7,7 @@ const manageproduct = async(req,res) =>{
     const {method, 
         query: {id}
         } = req
-     console.log(id)
+     console.log(typeof(id))
     switch (method) {
         case "GET":
         try {
