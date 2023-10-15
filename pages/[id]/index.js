@@ -14,7 +14,7 @@ const {selectedProduct,setSlectedProduct} =  useContext(UserContext)
 
   const router = useRouter()
 
-  const {product_img, product_name, product_dis, price, stok,product_id} = productItem[0]
+  const {product_img,product_name,  product_dis, price, stok,product_id} = productItem[0]
   
 
   const addProduct = () =>{
@@ -67,7 +67,7 @@ export async function getServerSideProps({params}){
   
   const API=process.env.NODE_ENV != "production"? "http://localhost:3000" : "https://e-commerce-next-ap-p.vercel.app"
   try {
-    const singleProduct = await fetch(`/api/pro/${id}`,{
+    const singleProduct = await fetch(`http://localhost:3000/api/pro/${id}`,{
     method: "GET"
   })
 const product = await singleProduct.json()
